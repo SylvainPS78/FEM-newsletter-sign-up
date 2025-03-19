@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    height: 95vh;
     margin: 0 auto;
     background-color: grey;
     font-family: "Roboto";
@@ -50,11 +50,15 @@ main {
     align-items: flex-start;
 }
 
-/*
-#success-page {
 
+#success-page {
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px;
+    justify-content: space-around;
 } 
-*/
+
 
 h1 {
     font-weight: 700;

@@ -15,26 +15,4 @@ Your users should be able to:
 
 Style :
 
-Mobile :
-
-- flex colonne
-	- image - OK
-	- H1 - OK
-	- p texte OK
-	- liste avec puce personnalisée sous forme d'une image
-	- label for form OK
-	- input form (avec texte par défaut "email@compagny.com" OK
-	- button submit OK (gradient de couleur quand click)
-
-==> SI OK :
-	- display none sur toute la page
-	- Autre flex avec :
-		- image
-		- H1
-		- p texte depuis le JS avec email user en gras
-		- button pour hide et revenir au flex principal (gradient de couleur quand click)
-
---> Si NOK :
-	- message d'erreur personalisé (valid email required)
-	- CSS personalisé (tout en rouge)
 

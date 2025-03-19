@@ -6,12 +6,25 @@ const mainPage = document.getElementById("main-page");
 const successPage = document.getElementById("success-page");
 const dismissBtn = document.getElementById("dismiss-btn");
 const confirmMsg = document.getElementById("confirm-msg");
+const illustration = document.getElementById("illustration");
+
 
 const handleSubmit = (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.target));
     console.log(data);
 }
+
+function updateIllustration () {
+    if (window.innerWidth >= 850) {
+        illustration.src = './assets/images/illustration-sign-up-desktop.svg';
+    }
+    else {
+        illustration.src = './assets/images/illustration-sign-up-mobile.svg';
+    }
+}
+
+window.addEventListener('resize', updateIllustration);
 
 form.addEventListener('submit',handleSubmit);
 
@@ -33,33 +46,3 @@ dismissBtn.addEventListener("click",() => {
     successPage.style.display = "none";
     form.reset();}
 )
-
-
-
-// :valid ?
-// :user-valid ?
-
-
-// :invalid ?
-// :user-invalid ?
-
-//typeMismatch: Returns true if the value is not in the required syntax (when type is email)
-//  or false if the syntax is correct. 
-// If true, the element matches the :invalid CSS pseudo-class.
-
-//valid: Returns true if the element meets all its validation constraints, and is therefore considered to be valid, or false if it fails any constraint. 
-// If true, the element matches the :valid CSS pseudo-class; the :invalid CSS pseudo-class otherwise.
-
-//valueMissing: Returns true if the element has a required attribute, but no value, or false otherwise.
-// If true, the element matches the :invalid CSS pseudo-class.
-
-//checkValidity(): Returns true if the element's value has no validity problems; false otherwise. 
-// If the element is invalid, this method also fires an invalid event on the element.
-
-//reportValidity(): Reports invalid field(s) using events. 
-// This method is useful in combination with preventDefault() in an onSubmit event handler.
-
-//setCustomValidity(message): Adds a custom error message to the element; if you set a custom error message, 
-// the element is considered to be invalid, and the specified error is displayed. 
-// This lets you use JavaScript code to establish a validation failure other than those offered by the standard HTML validation constraints. 
-// The message is shown to the user when reporting the problem.

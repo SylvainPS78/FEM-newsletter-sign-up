@@ -17,7 +17,6 @@ body {
     align-items: center;
     height: 95vh;
     margin: 0 auto;
-    background-color: grey;
     font-family: "Roboto";
     font-weight: 400;
     color: var(--Blue-800);
@@ -116,6 +115,70 @@ button:hover {
     display: none;
 }
 
-
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (width >= 850px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh; 
+        gap:9px; 
+        line-height: 1.5; 
+        background-color: var(--Blue-800);
+    }
+
+    main {
+        background-color: var(--White);
+        max-height: calc(100vh - 20px);
+        height: min-content;
+        margin: auto auto; 
+        padding:20px;
+        border-radius: 20px;
+    }
+    
+    #main-page {
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        grid-template-rows: 1fr;
+        align-items: center; 
+        min-height:min-content;
+        min-width: 835px;
+        max-height:500px;
+    } 
+
+    #container {
+        grid-column: 1/2;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    #illustration {
+        grid-column: 2/3;
+        grid-row: 1;
+        height: 100%;
+        max-height:460px;
+    }
+    
+    #success-page {
+        display:none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px;
+        justify-content: space-around;
+    } 
+
+    .attribution { 
+        color:var(--White);
+    }
+
+    .attribution a { 
+        color: var(--White);
+    }
+}

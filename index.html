@@ -31,11 +31,13 @@
           <li>And much more!</li>
         </ul>
   
-        <form id="form">
-          <label for="email">Email address</label>
-          <br>
-          <input type="email" name ="email" id="email" placeholder="email@company.com" required>
-          <button type="submit">Subscribe to monthly newsletter</button>
+        <form id="form" novalidate>
+          <label for="email">
+          <span id="form-label">Email address</span>
+          <span id="error-message">Valid Email Required</span>
+          </label>
+          <input id="user-input" type="email" name ="email" id="email" placeholder="email@company.com" required>
+          <button id="submit-btn" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
 

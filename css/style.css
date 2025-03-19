@@ -4,7 +4,7 @@
 }
 
 :root {
---Red: hsl(4, 100%, 67%);
+--Red: rgb(255, 98, 87);
 --Blue-800: hsl(234, 29%, 20%);
 --Blue-700: hsl(235, 18%, 26%);
 --Grey: hsl(0, 0%,58%);
@@ -67,6 +67,9 @@ li {
 label {
     font-weight: 700;
     font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 input, button {
@@ -82,6 +85,13 @@ input:hover, button:hover {
 
 input {
     border: 1px solid var(--Grey);
+    outline:none;
+}
+
+input:user-invalid {
+    border: 1px solid var(--Red);
+    color: var(--Red);
+    background-color: rgba(255, 98, 87,0.2);;
 }
 
 button {
@@ -96,6 +106,10 @@ button:hover {
     background: linear-gradient(to right,#FE5278,#FF683D);
 }
 
+#error-message {
+    color: var(--Red);
+    display: none;
+}
 
 
 .attribution { font-size: 11px; text-align: center; }

@@ -24,6 +24,8 @@ function updateIllustration () {
     }
 }
 
+updateIllustration();
+
 window.addEventListener('resize', updateIllustration);
 
 form.addEventListener('submit',handleSubmit);
@@ -42,7 +44,11 @@ submitBtn.addEventListener("click", () => {
 })
 
 dismissBtn.addEventListener("click",() => {
-    mainPage.style.display = "flex";
+    if (window.innerWidth >= 850) {
+        mainPage.style.display = "grid";
+    }
+    else {mainPage.style.display = "flex";}
     successPage.style.display = "none";
-    form.reset();}
+    form.reset();
+    updateIllustration();}
 )
